@@ -3,7 +3,8 @@ const Inliner = require("inliner");
 
 module.exports = bundler => {
   bundler.on("bundled", (bundle) => {
-    if (process.env.NODE_ENV !== "production" || bundle.entryAsset.type !== "html")
+    if ((process.env.NODE_ENV !== "production" || bundle.entryAsset.type !== "html")
+      && !process.env.INLINE_ASSETS)
       return;
 
     return new Promise((resolve, reject) => {
