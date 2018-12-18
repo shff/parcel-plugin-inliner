@@ -8,6 +8,16 @@ This plugin uses the [inliner](https://github.com/remy/inliner) utility to inlin
 
 Just install the plugin as a dependency using yarn or npm and build normally with Parcel. There are no configuration options.
 
+#### Very important!
+
+You have to run the build step in Parcel with the `--public-url .` option for the inliner to actually find the files.
+
+Example:
+
+```bash
+parcel build app/index.html --public-url .
+```
+
 ## Installation
 
 ```
