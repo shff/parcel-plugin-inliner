@@ -38,6 +38,11 @@ It only inlines the entry point of your app, and only works with HTML files.
 
 It does not delete the JS and CSS files.
 
+## Example gists
+
+ - Using link tags: https://gist.github.com/shff/8bf4606ecf1e3ee3ccee2a568d704c52
+ - Using import in JS: https://gist.github.com/shff/cdcaa31275c8ba9a8e2e230f445654a3
+
 ## Example
 
 #### Original HTML file:
