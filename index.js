@@ -25,6 +25,9 @@ module.exports = bundler => {
     if (process.env.NODE_ENV !== "production" && !process.env.INLINE_ASSETS)
       return;
 
+    if (!bundle.entryAsset)
+      return Promise.all(Array.from(bundle.childBundles).map((child) => run(child)));
+
     return run(bundle);
   });
 };
