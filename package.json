@@ -10,7 +10,7 @@
     "inliner": "^1.13.1"
   },
   "peerDependencies": {
-    "parcel-bundler": "^1.9.4"
+    "parcel": "^1.9.4"
   },
   "repository": {
     "type": "git",
