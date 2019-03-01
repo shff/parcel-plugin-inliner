@@ -1,23 +1,14 @@
 const fs = require("fs");
-const Inliner = require("inliner");
+const postHTML = require("posthtml");
+const posthtmlInlineAssets = require("posthtml-inline-assets");
 
-const run = bundle => {
-  if (bundle.entryAsset.type !== "html")
-    return;
+const run = async bundle => {
+  if (bundle.entryAsset.type !== "html") return;
 
-  return new Promise((resolve, reject) => {
-    const inliner = new Inliner(bundle.name, function(error, html) {
-      if (error) {
-        reject(error);
-      }
-      fs.writeFile(bundle.name, html, function(err) {
-        if (error) {
-          reject(error);
-        }
-        resolve();
-      });
-    });
-  });
+  const cwd = bundle.entryAsset.options.outDir;
+  const data = fs.readFileSync(bundle.name);
+  const result = await postHTML([posthtmlInlineAssets({ cwd })]).process(data);
+  fs.writeFileSync(bundle.name, result.html);
 };
 
 module.exports = bundler => {
