@@ -1,6 +1,6 @@
 {
   "name": "parcel-plugin-inliner",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Parcel plugin to inline CSS and JS code in your HTML file.",
   "main": "index.js",
   "repository": {
@@ -23,6 +23,8 @@
     "parcel",
     "parcel-plugin",
     "plugin",
-    "inliner"
+    "inliner",
+    "posthtml",
+    "posthtml-inline-assets"
   ]
 }
