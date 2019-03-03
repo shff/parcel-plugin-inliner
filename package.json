@@ -1,20 +1,19 @@
 {
   "name": "parcel-plugin-inliner",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Parcel plugin to inline CSS and JS code in your HTML file.",
   "main": "index.js",
-  "repository": "https://github.com/shff/parcel-plugin-inliner",
-  "author": "Silvio Henrique Ferreira <shferreira@me.com>",
-  "license": "MIT",
-  "dependencies": {
-    "inliner": "^1.13.1"
-  },
-  "peerDependencies": {
-    "parcel": "^1.9.4"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shff/parcel-plugin-inliner.git"
+  },
+  "author": "Silvio Henrique Ferreira <shferreira@me.com>",
+  "license": "MIT",
+  "dependencies": {
+    "posthtml-inline-assets": "^3.0.0"
+  },
+  "peerDependencies": {
+    "parcel": "^1.9.4"
   },
   "bugs": {
     "url": "https://github.com/shff/parcel-plugin-inliner/issues"
@@ -24,6 +23,8 @@
     "parcel",
     "parcel-plugin",
     "plugin",
-    "inliner"
+    "inliner",
+    "posthtml",
+    "posthtml-inline-assets"
   ]
 }
