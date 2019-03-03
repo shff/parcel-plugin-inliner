@@ -2,7 +2,7 @@
 
 A Parcel plugin to inline CSS and JS code in your HTML file.
 
-This plugin uses the [inliner](https://github.com/remy/inliner) utility to inline your entry point.
+This plugin uses [PostHTML](https://www.npmjs.com/package/posthtml) and [posthtml-inline-assets](https://www.npmjs.com/package/posthtml-inline-assets) to inline your HTML files.
 
 ## Usage
 
@@ -10,7 +10,7 @@ Just install the plugin as a dependency using yarn or npm and build normally wit
 
 #### Very important!
 
-You have to run the build step in Parcel with the `--public-url .` option for the inliner to actually find the files.
+You have to run the build step in Parcel with the `--public-url .` option for the inliner to actually find the files. If you leave this out the default is `/`, and the inliner won't be able to look for the files in the right location.
 
 Example:
 
