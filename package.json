@@ -13,7 +13,7 @@
     "posthtml-inline-assets": "^3.0.0"
   },
   "peerDependencies": {
-    "parcel": "^1.9.4"
+    "parcel-bundler": "^1.9.4"
   },
   "bugs": {
     "url": "https://github.com/shff/parcel-plugin-inliner/issues"
