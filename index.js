@@ -7,10 +7,28 @@ module.exports = bundler => {
     const bundles = Array.from(bundle.childBundles).concat([bundle]);
     return Promise.all(bundles.map(async bundle => {
       if (!bundle.entryAsset || bundle.entryAsset.type !== "html") return;
-    
-      const cwd = bundle.entryAsset.options.outDir;
+
+      let config = { cwd: bundle.entryAsset.options.outDir };
+      const userConfig = await bundle.entryAsset.getConfig([
+        'posthtml.config.js',
+        '.posthtmlrc'
+      ]);
+
+      if (
+        userConfig &&
+        userConfig.hasOwnProperty('plugins') &&
+        userConfig.plugins.hasOwnProperty('posthtml-inline-assets')
+      ) {
+        config = Object.assign(
+          config,
+          userConfig.plugins['posthtml-inline-assets']
+        );
+      }
+
       const data = fs.readFileSync(bundle.name);
-      const result = await postHTML([posthtmlInlineAssets({ cwd })]).process(data);
+      const result = await postHTML([
+        posthtmlInlineAssets(config)
+      ]).process(data);
       fs.writeFileSync(bundle.name, result.html);
     }));
   });
