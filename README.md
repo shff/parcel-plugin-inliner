@@ -8,16 +8,6 @@ This plugin uses [PostHTML](https://www.npmjs.com/package/posthtml) and [posthtm
 
 Just install the plugin as a dependency using yarn or npm and build normally with Parcel. There are no configuration options.
 
-#### Very important!
-
-You have to run the build step in Parcel with the `--public-url .` option for the inliner to actually find the files. If you leave this out the default is `/`, and the inliner won't be able to look for the files in the right location.
-
-Example:
-
-```bash
-parcel build app/index.html --public-url .
-```
-
 ## Installation
 
 ```
