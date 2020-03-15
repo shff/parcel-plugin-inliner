@@ -1,6 +1,6 @@
 const fs = require("fs");
 const postHTML = require("posthtml");
-const posthtmlInlineAssets = require("posthtml-inline-assets");
+const posthtmlInlineAssets = require("@shferreira/posthtml-inline-assets");
 
 module.exports = bundler => {
   bundler.on("bundled", (bundle) => {
