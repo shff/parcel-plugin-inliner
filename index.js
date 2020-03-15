@@ -4,6 +4,8 @@ const posthtmlInlineAssets = require("@shferreira/posthtml-inline-assets");
 
 module.exports = bundler => {
   bundler.on("bundled", (bundle) => {
+    if (process.env.NODE_ENV !== "production" && !process.env.INLINE_ASSETS) return;
+
     const bundles = Array.from(bundle.childBundles).concat([bundle]);
     return Promise.all(bundles.map(async bundle => {
       if (!bundle.entryAsset || bundle.entryAsset.type !== "html") return;
