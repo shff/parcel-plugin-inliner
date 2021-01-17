@@ -10,7 +10,7 @@
   "author": "Silvio Henrique Ferreira <shferreira@me.com>",
   "license": "MIT",
   "dependencies": {
-    "@shferreira/posthtml-inline-assets": "^3.0.0"
+    "posthtml-inline-assets": "^3.1.0"
   },
   "peerDependencies": {
     "parcel-bundler": "^1.9.4"

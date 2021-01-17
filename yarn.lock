@@ -12,10 +12,10 @@ fse@^4.0.1:
   resolved "https://registry.yarnpkg.com/fse/-/fse-4.0.1.tgz#9e1db80203933cbe59ed75507f35adf2689ce1e9"
   integrity sha512-5XLUrweQvJxSJKhBe3XjimHSJ2EUhYOG+K2tLQy8I9kp78Fa3CgUXqxAZWxE9+fsvnI5GVkHl4NDqbf1tSb93Q==
 
-posthtml-inline-assets@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/posthtml-inline-assets/-/posthtml-inline-assets-3.0.0.tgz#fd3c7c278a610f162fbb0c82e8fd8178ca1685d3"
-  integrity sha512-CEFG5YA+JRoIcLYpQNU6z5rFm8FD/97Ikuj0UIsaJP2DqFwqVsIVvQe6mFHiSncouqY1c9j8c7wOd5g57jdAJw==
+posthtml-inline-assets@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/posthtml-inline-assets/-/posthtml-inline-assets-3.1.0.tgz#a245e65c6a9999e7b38d893f3982f108d725a906"
+  integrity sha512-52VGs/FG8NNlzv04jZe1HBy5pQ+HWifbQpZN5q0tt6QNkgy3SZCutf4UZyM93uzYym71tKPCQkzAXN3XnRSTgA==
   dependencies:
     file-type "^10.4.0"
     fse "^4.0.1"

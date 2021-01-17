@@ -1,6 +1,6 @@
 const fs = require("fs");
 const postHTML = require("posthtml");
-const posthtmlInlineAssets = require("@shferreira/posthtml-inline-assets");
+const posthtmlInlineAssets = require("posthtml-inline-assets");
 
 module.exports = bundler => {
   bundler.on("bundled", (bundle) => {
@@ -9,7 +9,7 @@ module.exports = bundler => {
     const bundles = Array.from(bundle.childBundles).concat([bundle]);
     return Promise.all(bundles.map(async bundle => {
       if (!bundle.entryAsset || bundle.entryAsset.type !== "html") return;
-    
+
       const cwd = bundle.entryAsset.options.outDir;
       const data = fs.readFileSync(bundle.name);
       const result = await postHTML([posthtmlInlineAssets({ cwd, root: cwd })]).process(data);
