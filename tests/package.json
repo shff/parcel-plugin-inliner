@@ -1,7 +1,6 @@
 {
   "license": "MIT",
   "dependencies": {
-    "parcel": "^1.12.4",
     "parcel-plugin-inliner": ".."
   }
 }
