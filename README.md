@@ -8,6 +8,8 @@ This plugin uses [PostHTML](https://www.npmjs.com/package/posthtml) and [posthtm
 
 Due to a change in Parcel 2.0 API, plugins whose package name start with `parcel-plugin-` don't work on it. This plugin needs Parcel 1.x.
 
+If you want inlining in Parcel 2.0, check their documentation: [Inline script and style tags :: v2.parceljs.org](https://v2.parceljs.org/languages/html/#inline-script-and-style-tags).
+
 ## Usage
 
 Just install the plugin as a dependency using yarn or npm and build normally with Parcel. There are no configuration options.
