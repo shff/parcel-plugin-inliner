@@ -4,6 +4,10 @@ A Parcel plugin to inline CSS and JS code in your HTML file.
 
 This plugin uses [PostHTML](https://www.npmjs.com/package/posthtml) and [posthtml-inline-assets](https://www.npmjs.com/package/posthtml-inline-assets) to inline your HTML files.
 
+## IMPORTANT NOTICE:
+
+Due to a change in Parcel 2.0 API, plugins whose package name start with `parcel-plugin-` don't work on it. This plugin needs Parcel 1.x.
+
 ## Usage
 
 Just install the plugin as a dependency using yarn or npm and build normally with Parcel. There are no configuration options.
